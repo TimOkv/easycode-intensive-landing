@@ -1,0 +1,726 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Ключ к технологиям&nbsp;— практический интенсив EasyLab</title>
+  <meta name="description" content="Практический интенсив EasyCode: 10 онлайн-вебинаров о компьютере, кибербезопасности, дизайне, монтаже, сайтах, таблицах, презентациях и ИИ для учёбы. Старт 22 сентября, вторник и четверг в 17:00.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Ключ к технологиям&nbsp;— практический интенсив EasyLab">
+  <meta property="og:description" content="10 интерактивных вебинаров, квизы, закрытый чат с преподавателем и именной сертификат. Старт 22 сентября.">
+  <meta name="theme-color" content="#575ed6">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@300;400;500;600;700&family=Unbounded:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+
+<!-- Спрайт: знак «прогрузки» из брендбука + линейные иконки (одинаковая толщина, скруглённые углы, без заливок) -->
+<svg class="sprite" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="grad-sign" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#5a5ff0"/><stop offset=".55" stop-color="#8a55dc"/><stop offset="1" stop-color="#c94a98"/>
+    </linearGradient>
+    <linearGradient id="cap-body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#6aa6ff"/><stop offset=".45" stop-color="#1f6dff"/><stop offset="1" stop-color="#0a3fc2"/>
+    </linearGradient>
+    <linearGradient id="cap-glass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff" stop-opacity=".55"/><stop offset="1" stop-color="#fff" stop-opacity=".08"/>
+    </linearGradient>
+  </defs>
+  <symbol id="sign" viewBox="-50 -50 100 100"><path fill="none" stroke-width="11" stroke-linecap="round" d="M0-20V-38M14.1-14.1 26.9-26.9M20 0H38M14.1 14.1 26.9 26.9M0 20V38M-14.1 14.1-26.9 26.9M-20 0H-38"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-back" viewBox="0 0 24 24"><path d="M19 12H5M11 18l-6-6 6-6"/></symbol>
+  <symbol id="i-chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><rect x="4.5" y="10.5" width="15" height="10" rx="2.5"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/></symbol>
+  <symbol id="i-cpu" viewBox="0 0 24 24"><rect x="5" y="5" width="14" height="14" rx="2.5"/><rect x="9.5" y="9.5" width="5" height="5" rx="1"/><path d="M9.5 2v3M14.5 2v3M9.5 19v3M14.5 19v3M19 9.5h3M19 14.5h3M2 9.5h3M2 14.5h3"/></symbol>
+  <symbol id="i-browser" viewBox="0 0 24 24"><rect x="2.5" y="4" width="19" height="16" rx="3"/><path d="M2.5 9h19M6 6.5h.01M9 6.5h.01"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 21.5s7.5-3.5 7.5-9.5V5.5L12 2.5l-7.5 3V12c0 6 7.5 9.5 7.5 9.5z"/><path d="M9 12l2 2 4-4"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5"/><path d="M12 6.5V12l3.5 2"/></symbol>
+  <symbol id="i-pen" viewBox="0 0 24 24"><path d="M12 19.5l7-7 3 3-7 7z"/><path d="M18 13.5 16.5 6 2.5 2.5 6 16.5l7.5 1.5"/><path d="M2.5 2.5l7.1 7.1"/><circle cx="11" cy="11" r="2"/></symbol>
+  <symbol id="i-video" viewBox="0 0 24 24"><rect x="2.5" y="6" width="13.5" height="12" rx="2.5"/><path d="M16 10.5l5.5-3.5v10L16 13.5"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5"/><path d="M2.5 12h19M12 2.5c2.6 2.8 3.9 6 3.9 9.5s-1.3 6.7-3.9 9.5c-2.6-2.8-3.9-6-3.9-9.5S9.4 5.3 12 2.5z"/></symbol>
+  <symbol id="i-table" viewBox="0 0 24 24"><rect x="3" y="3.5" width="18" height="17" rx="2.5"/><path d="M3 9.5h18M3 15h18M9.5 3.5v17"/></symbol>
+  <symbol id="i-slides" viewBox="0 0 24 24"><path d="M2.5 3.5h19M4 3.5v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-10M8 21l4-5.5 4 5.5M8 11l2.5-2.5 2 2L16 7"/></symbol>
+  <symbol id="i-spark" viewBox="0 0 24 24"><path d="M11 3.5l1.8 4.9 4.9 1.8-4.9 1.8L11 16.9l-1.8-4.9-4.9-1.8 4.9-1.8z"/><path d="M18.5 15v5M16 17.5h5"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M20.5 14.5a2 2 0 0 1-2 2H8l-4.5 4v-15a2 2 0 0 1 2-2h13a2 2 0 0 1 2 2z"/><path d="M8 8.5h8M8 12h5"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5"/><path d="M10 8.5l5.5 3.5-5.5 3.5z"/></symbol>
+  <symbol id="i-folder" viewBox="0 0 24 24"><path d="M3 7.5a2 2 0 0 1 2-2h4l2 2.5h8a2 2 0 0 1 2 2v8.5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></symbol>
+  <symbol id="i-award" viewBox="0 0 24 24"><circle cx="12" cy="9" r="6"/><path d="M8.5 13.9 7 21.5l5-2.8 5 2.8-1.5-7.6"/></symbol>
+  <symbol id="i-quiz" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M8 12.2l2.8 2.8L16.5 9"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4.5 21a7.5 7.5 0 0 1 15 0"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.8"/><path d="M2 20.5a7 7 0 0 1 14 0M16 4.3a3.8 3.8 0 0 1 0 7.4M22 20.5a7 7 0 0 0-4-6.3"/></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="4.5" width="18" height="17" rx="2.5"/><path d="M16 2.5v4M8 2.5v4M3 10h18"/></symbol>
+  <symbol id="i-key" viewBox="0 0 24 24"><circle cx="7.5" cy="15.5" r="5"/><path d="M11 12 20.5 2.5M16.5 6.5l3 3M13.5 9.5l2 2"/></symbol>
+  <symbol id="i-copy" viewBox="0 0 24 24"><rect x="9" y="9" width="12" height="12" rx="2.5"/><path d="M5 15H4.5A1.5 1.5 0 0 1 3 13.5v-9A1.5 1.5 0 0 1 4.5 3h9A1.5 1.5 0 0 1 15 4.5V5"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24"><path d="M21.5 2.5 10.5 13.5M21.5 2.5l-7 19-4-8-8-4z"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2.5 4 13.5h7.5l-1 8 9-11H12z"/></symbol>
+  <symbol id="coin" viewBox="0 0 24 24"><rect x="2" y="6" width="20" height="12" rx="3" fill="#ec6a9a"/><circle cx="12" cy="12" r="3.2" fill="#fff" opacity=".85"/><circle cx="2" cy="12" r="2.2" fill="var(--coin-bg)"/><circle cx="22" cy="12" r="2.2" fill="var(--coin-bg)"/></symbol>
+</svg>
+
+<a class="skip" href="#program">Перейти к программе</a>
+
+<!-- ============ ШАПКА: продолжает топбар платформы ============ -->
+<header class="topbar">
+  <div class="topbar__inner">
+    <a class="logo" href="https://easycode-lab.ru" aria-label="EasyCode Lab&nbsp;— на главную">
+      <svg class="logo__sign" aria-hidden="true"><use href="#sign"/></svg>
+      <span class="logo__word"><span class="grad-text">EasyCode</span> Lab</span>
+    </a>
+    <nav class="nav" aria-label="Разделы страницы">
+      <a href="#program">Программа</a>
+      <a href="#format">Формат</a>
+      <a href="#access">Эфиры и квизы</a>
+      <a href="#teacher">Преподаватель</a>
+      <a href="#faq">Вопросы</a>
+    </nav>
+    <div class="topbar__actions">
+      <a class="live-pill" data-live-link href="#" hidden><span class="live-dot"></span>В эфире</a>
+      <a class="btn btn--ghost btn--sm hide-sm" href="https://easycode-lab.ru/login">Войти</a>
+      <button class="btn btn--grad btn--sm" type="button" data-enroll>Записаться</button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ============ 1. ПЕРВЫЙ ЭКРАН ============ -->
+<section class="hero wrap" aria-labelledby="hero-title">
+  <div class="hero__card">
+    <svg class="hero__caps" viewBox="0 0 600 600" aria-hidden="true">
+      <g transform="translate(470 110) rotate(-35)"><g class="cap cap--a"><rect x="-70" y="-30" width="140" height="60" rx="30" fill="url(#cap-body)"/><rect x="-54" y="-24" width="92" height="16" rx="8" fill="#fff" opacity=".45"/></g></g>
+      <g transform="translate(560 330) rotate(62)"><g class="cap cap--b"><rect x="-56" y="-24" width="112" height="48" rx="24" fill="url(#cap-glass)" stroke="#fff" stroke-opacity=".45" stroke-width="2"/></g></g>
+      <g transform="translate(300 40) rotate(20)"><g class="cap cap--c"><rect x="-40" y="-17" width="80" height="34" rx="17" fill="url(#cap-body)"/><rect x="-30" y="-13" width="50" height="9" rx="4.5" fill="#fff" opacity=".45"/></g></g>
+      <g transform="translate(520 560) rotate(-70)"><g class="cap cap--d"><rect x="-64" y="-27" width="128" height="54" rx="27" fill="url(#cap-body)"/><rect x="-50" y="-21" width="84" height="14" rx="7" fill="#fff" opacity=".45"/></g></g>
+    </svg>
+
+    <div class="hero__grid">
+      <div class="hero__main">
+        <a class="back-pill" href="https://easycode-lab.ru"><svg aria-hidden="true"><use href="#i-back"/></svg>EasyLab</a>
+        <p class="eyebrow eyebrow--light"><span class="eyebrow__line"></span>Практический интенсив · сентябрь&nbsp;— октябрь 2026</p>
+        <h1 class="hero__title" id="hero-title">Ключ к&nbsp;технологиям</h1>
+        <p class="hero__lead">10 живых онлайн-уроков, после которых компьютер становится инструментом, а&nbsp;не&nbsp;только игрушкой. Соберёшь свой сайт, смонтируешь ролик, защитишь аккаунты от&nbsp;взлома и&nbsp;научишься учиться быстрее с&nbsp;ИИ.</p>
+        <ul class="meta">
+          <li><b>Вт и&nbsp;Чт, 17:00</b><span>Расписание</span></li>
+          <li><b>10 уроков</b><span>В интенсиве</span></li>
+          <li><b>22 сентября</b><span>Старт</span></li>
+        </ul>
+        <div class="hero__cta">
+          <button class="btn btn--white btn--lg" type="button" data-enroll>Записаться на&nbsp;интенсив<svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
+          <a class="btn btn--glass btn--lg" href="#program">Смотреть программу</a>
+        </div>
+        <p class="hero__note"><svg aria-hidden="true"><use href="#i-lock"/></svg>Закрытый интенсив: эфиры, записи и&nbsp;чат&nbsp;— только для участников</p>
+      </div>
+
+      <!-- Виджет «Ближайший эфир»: состояние считается по расписанию (app.js) -->
+      <aside class="next" data-next aria-label="Ближайший эфир">
+        <div class="next__top">
+          <span class="pill pill--soon" data-next-pill>Скоро</span>
+          <span class="next__lock"><svg aria-hidden="true"><use href="#i-lock"/></svg>Закрытый эфир</span>
+        </div>
+        <p class="next__label" data-next-label>Ближайший эфир · урок 01</p>
+        <p class="next__title" data-next-title>Архитектура и выбор ПК</p>
+        <p class="next__date" data-next-date>вторник, 22 сентября · 17:00&nbsp;МСК</p>
+        <div class="countdown" data-countdown role="timer" aria-live="off">
+          <div><b data-cd="d">—</b><span data-cdl="d">дней</span></div>
+          <div><b data-cd="h">—</b><span data-cdl="h">часов</span></div>
+          <div><b data-cd="m">—</b><span data-cdl="m">минут</span></div>
+          <div><b data-cd="s">—</b><span data-cdl="s">секунд</span></div>
+        </div>
+        <p class="next__livebox" data-next-livebox hidden><span class="live-dot"></span><span data-next-livetext>Урок идёт прямо сейчас</span></p>
+        <a class="btn btn--block btn--wait" data-next-btn href="#program" aria-disabled="true">Эфир откроется в 16:50</a>
+        <p class="next__hint" data-next-hint>Кнопка «В&nbsp;эфире» загорится за&nbsp;10 минут до&nbsp;начала. Вход&nbsp;— по&nbsp;аккаунту участника EasyLab.</p>
+      </aside>
+    </div>
+  </div>
+
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker__track">
+      <span>Сборка ПК</span><span>Горячие клавиши</span><span>Защита от&nbsp;фишинга</span><span>Двухфакторка</span><span>Фокус и&nbsp;приоритеты</span><span>Figma</span><span>Графика с&nbsp;ИИ</span><span>CapCut</span><span>Свой сайт</span><span>Формулы</span><span>Презентации</span><span>Нейросети</span><span>Облачные диски</span>
+      <span>Сборка ПК</span><span>Горячие клавиши</span><span>Защита от&nbsp;фишинга</span><span>Двухфакторка</span><span>Фокус и&nbsp;приоритеты</span><span>Figma</span><span>Графика с&nbsp;ИИ</span><span>CapCut</span><span>Свой сайт</span><span>Формулы</span><span>Презентации</span><span>Нейросети</span><span>Облачные диски</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 2. ЗАЧЕМ: ученику и родителю ============ -->
+<section class="section wrap" id="why" aria-labelledby="why-title">
+  <div class="head reveal">
+    <p class="eyebrow">Зачем это нужно</p>
+    <h2 class="h2" id="why-title">Компьютер есть у&nbsp;всех. Ключ к&nbsp;нему&nbsp;— у&nbsp;немногих</h2>
+    <p class="lead">Школьники проводят за&nbsp;экраном часы, но&nbsp;часто умеют только запускать игры и&nbsp;листать ленту. Интенсив превращает это время в&nbsp;навыки, которые пригодятся в&nbsp;учёбе, творчестве и&nbsp;будущей профессии.</p>
+  </div>
+
+  <div class="duo">
+    <article class="duo__card reveal">
+      <div class="duo__badge"><svg aria-hidden="true"><use href="#i-user"/></svg>Ученику</div>
+      <h3 class="h3">Прокачаешь навыки, результат которых видно сразу</h3>
+      <ul class="ticks">
+        <li>Разберёшься, из&nbsp;чего сделан компьютер, и&nbsp;сможешь выбрать технику под свои задачи</li>
+        <li>Смонтируешь ролик с&nbsp;переходами, звуком и&nbsp;титрами в&nbsp;CapCut</li>
+        <li>Запустишь собственный сайт и&nbsp;сделаешь графику в&nbsp;Figma и&nbsp;с&nbsp;помощью ИИ</li>
+        <li>Будешь быстрее справляться с&nbsp;учёбой: таблицы, презентации, нейросети</li>
+        <li>Заработаешь XP и&nbsp;EasyCoins за&nbsp;квизы, а&nbsp;в&nbsp;финале получишь именной сертификат</li>
+      </ul>
+    </article>
+    <article class="duo__card duo__card--alt reveal">
+      <div class="duo__badge duo__badge--alt"><svg aria-hidden="true"><use href="#i-users"/></svg>Родителю</div>
+      <h3 class="h3">Время за&nbsp;компьютером&nbsp;— с&nbsp;пользой и&nbsp;в&nbsp;безопасности</h3>
+      <ul class="ticks">
+        <li>Ребёнок узнает, как распознать фишинг, придумать надёжный пароль и&nbsp;включить двухфакторную защиту</li>
+        <li>Научится ставить приоритеты и&nbsp;меньше отвлекаться, пока делает уроки</li>
+        <li>Освоит документы, таблицы и&nbsp;презентации&nbsp;— то, что нужно в&nbsp;школе уже сейчас</li>
+        <li>Живые эфиры с&nbsp;преподавателем и&nbsp;закрытый чат, где помогут кураторы</li>
+        <li>Записи и&nbsp;материалы остаются в&nbsp;личном кабинете&nbsp;— к&nbsp;ним можно вернуться в&nbsp;любой момент</li>
+      </ul>
+    </article>
+  </div>
+</section>
+
+<!-- ============ 3. РЕЗУЛЬТАТ ============ -->
+<section class="section wrap" id="result" aria-labelledby="result-title">
+  <div class="head head--row reveal">
+    <div>
+      <p class="eyebrow">Результат</p>
+      <h2 class="h2" id="result-title">Что останется после 10&nbsp;уроков</h2>
+    </div>
+    <p class="lead">Не&nbsp;«послушал и&nbsp;забыл», а&nbsp;конкретные вещи, которые можно показать друзьям, учителю и&nbsp;родителям.</p>
+  </div>
+  <div class="results">
+    <article class="result result--wide reveal">
+      <span class="result__icon"><svg aria-hidden="true"><use href="#i-globe"/></svg></span>
+      <div><h3 class="h4">Свой сайт в&nbsp;интернете</h3><p>Собранный на&nbsp;конструкторе и&nbsp;опубликованный по&nbsp;настоящей ссылке</p></div>
+      <span class="result__from">урок 07</span>
+    </article>
+    <article class="result reveal">
+      <span class="result__icon"><svg aria-hidden="true"><use href="#i-video"/></svg></span>
+      <div><h3 class="h4">Смонтированный ролик</h3><p>Нарезка, переходы, звук и&nbsp;титры в&nbsp;CapCut</p></div>
+      <span class="result__from">урок 06</span>
+    </article>
+    <article class="result reveal">
+      <span class="result__icon"><svg aria-hidden="true"><use href="#i-pen"/></svg></span>
+      <div><h3 class="h4">Графика в&nbsp;Figma</h3><p>Композиция, слои, шрифты и&nbsp;картинки с&nbsp;помощью ИИ</p></div>
+      <span class="result__from">урок 05</span>
+    </article>
+    <article class="result reveal">
+      <span class="result__icon"><svg aria-hidden="true"><use href="#i-shield"/></svg></span>
+      <div><h3 class="h4">Защищённые аккаунты</h3><p>Сложные пароли и&nbsp;двухфакторная аутентификация</p></div>
+      <span class="result__from">урок 03</span>
+    </article>
+    <article class="result reveal">
+      <span class="result__icon"><svg aria-hidden="true"><use href="#i-slides"/></svg></span>
+      <div><h3 class="h4">Стильная презентация</h3><p>По&nbsp;правилам сетки и&nbsp;иерархии</p></div>
+      <span class="result__from">урок 09</span>
+    </article>
+    <article class="result reveal">
+      <span class="result__icon"><svg aria-hidden="true"><use href="#i-table"/></svg></span>
+      <div><h3 class="h4">Таблица, которая считает сама</h3><p>Формулы, расчёты и&nbsp;аккуратное форматирование</p></div>
+      <span class="result__from">урок 08</span>
+    </article>
+    <article class="result result--grad reveal">
+      <span class="result__icon"><svg aria-hidden="true"><use href="#i-award"/></svg></span>
+      <div><h3 class="h4">Именной сертификат</h3><p>Выпускника интенсива EasyCode</p></div>
+      <span class="result__from">финал</span>
+    </article>
+  </div>
+</section>
+
+<!-- ============ 4. ПРОГРАММА ============ -->
+<section class="section wrap" id="program" aria-labelledby="program-title">
+  <div class="head head--row reveal">
+    <div>
+      <p class="eyebrow">Программа</p>
+      <h2 class="h2" id="program-title">10 уроков&nbsp;— 10&nbsp;навыков</h2>
+    </div>
+    <p class="lead">Четыре уровня: от&nbsp;того, как устроен компьютер, до&nbsp;собственного сайта и&nbsp;нейросетей для учёбы. Каждый урок&nbsp;— эфир, практика и&nbsp;квиз.</p>
+  </div>
+
+  <div class="program">
+    <aside class="program__side">
+      <div class="cal card" data-cal>
+        <div class="cal__head">
+          <button class="cal__nav" type="button" data-cal-prev aria-label="Предыдущий месяц">‹</button>
+          <p class="cal__title" data-cal-title>Сентябрь 2026</p>
+          <button class="cal__nav" type="button" data-cal-next aria-label="Следующий месяц">›</button>
+        </div>
+        <div class="cal__dow" aria-hidden="true"><span>пн</span><span>вт</span><span>ср</span><span>чт</span><span>пт</span><span>сб</span><span>вс</span></div>
+        <div class="cal__grid" data-cal-grid></div>
+        <p class="cal__legend"><span class="cal__dot"></span>Дни эфиров кликабельны</p>
+      </div>
+      <div class="load card">
+        <div class="load__row">
+          <p class="load__title">Прогрузка навыков</p>
+          <p class="load__count"><b data-load-count>0</b>/10</p>
+        </div>
+        <div class="load__bar" data-load aria-hidden="true">
+          <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+        </div>
+        <p class="load__text">Каждый пройденный урок заполняет одну капсулу. Все десять&nbsp;— и&nbsp;сертификат твой.</p>
+      </div>
+    </aside>
+
+    <div class="program__list">
+      <p class="level reveal"><span class="level__tag">LVL 1</span>Фундамент</p>
+
+      <details class="lesson reveal" id="lesson-1" data-lesson="1" data-date="2026-09-22">
+        <summary>
+          <span class="lesson__num">01</span>
+          <span class="lesson__body"><span class="lesson__title">Архитектура и&nbsp;выбор ПК</span><span class="lesson__date">вторник, 22 сентября · 17:00&nbsp;МСК</span></span>
+          <span class="pill pill--soon" data-status>Скоро</span>
+          <svg class="lesson__chev" aria-hidden="true"><use href="#i-chev"/></svg>
+        </summary>
+        <div class="lesson__more">
+          <span class="lesson__icon"><svg aria-hidden="true"><use href="#i-cpu"/></svg></span>
+          <div>
+            <p>Заглянем внутрь компьютера и&nbsp;разберёмся, за&nbsp;что отвечает каждая деталь. Научишься читать характеристики и&nbsp;подбирать технику под учёбу и&nbsp;свои задачи&nbsp;— без переплат за&nbsp;лишнее.</p>
+            <ul class="ticks ticks--sm"><li>Как устроен компьютер: процессор, видеокарта, память, накопитель</li><li>Чем отличаются процессоры и&nbsp;видеокарты и&nbsp;когда что важнее</li><li>Как грамотно выбрать ноутбук или ПК под учёбу и&nbsp;задачи</li></ul>
+            <p class="lesson__tags"><span class="tag">Эфир</span><span class="tag">Практика</span><span class="tag tag--xp">Квиз · XP</span></p>
+          </div>
+        </div>
+      </details>
+
+      <details class="lesson reveal" id="lesson-2" data-lesson="2" data-date="2026-09-24">
+        <summary>
+          <span class="lesson__num">02</span>
+          <span class="lesson__body"><span class="lesson__title">Мастерство работы в&nbsp;браузере</span><span class="lesson__date">четверг, 24 сентября · 17:00&nbsp;МСК</span></span>
+          <span class="pill pill--soon" data-status>Скоро</span>
+          <svg class="lesson__chev" aria-hidden="true"><use href="#i-chev"/></svg>
+        </summary>
+        <div class="lesson__more">
+          <span class="lesson__icon"><svg aria-hidden="true"><use href="#i-browser"/></svg></span>
+          <div>
+            <p>Браузер&nbsp;— главный рабочий инструмент. Разберём приёмы, которые экономят часы: от&nbsp;горячих клавиш до&nbsp;порядка во&nbsp;вкладках и&nbsp;файлах.</p>
+            <ul class="ticks ticks--sm"><li>Горячие клавиши, которые ускоряют работу в&nbsp;разы</li><li>Как управлять вкладками и&nbsp;не&nbsp;терять нужное</li><li>Что такое кэш, зачем его чистить и&nbsp;где искать скачанные файлы</li></ul>
+            <p class="lesson__tags"><span class="tag">Эфир</span><span class="tag">Практика</span><span class="tag tag--xp">Квиз · XP</span></p>
+          </div>
+        </div>
+      </details>
+
+      <p class="level reveal"><span class="level__tag">LVL 2</span>Безопасность и&nbsp;фокус</p>
+
+      <details class="lesson reveal" id="lesson-3" data-lesson="3" data-date="2026-09-29">
+        <summary>
+          <span class="lesson__num">03</span>
+          <span class="lesson__body"><span class="lesson__title">Цифровая гигиена и&nbsp;кибербезопасность</span><span class="lesson__date">вторник, 29 сентября · 17:00&nbsp;МСК</span></span>
+          <span class="pill pill--soon" data-status>Скоро</span>
+          <svg class="lesson__chev" aria-hidden="true"><use href="#i-chev"/></svg>
+        </summary>
+        <div class="lesson__more">
+          <span class="lesson__icon"><svg aria-hidden="true"><use href="#i-shield"/></svg></span>
+          <div>
+            <p>Учимся защищать себя и&nbsp;свои аккаунты: распознавать фишинг, придумывать надёжные пароли и&nbsp;включать двухфакторную аутентификацию.</p>
+            <ul class="ticks ticks--sm"><li>Как распознать фишинговое письмо, сообщение или сайт</li><li>Как придумать сложный пароль и&nbsp;не&nbsp;забыть его</li><li>Двухфакторная аутентификация и&nbsp;правила безопасного интернета</li></ul>
+            <p class="lesson__tags"><span class="tag">Эфир</span><span class="tag">Практика</span><span class="tag tag--xp">Квиз · XP</span></p>
+          </div>
+        </div>
+      </details>
+
+      <details class="lesson reveal" id="lesson-4" data-lesson="4" data-date="2026-10-01">
+        <summary>
+          <span class="lesson__num">04</span>
+          <span class="lesson__body"><span class="lesson__title">Тайм-менеджмент за&nbsp;компьютером</span><span class="lesson__date">четверг, 1 октября · 17:00&nbsp;МСК</span></span>
+          <span class="pill pill--soon" data-status>Скоро</span>
+          <svg class="lesson__chev" aria-hidden="true"><use href="#i-chev"/></svg>
+        </summary>
+        <div class="lesson__more">
+          <span class="lesson__icon"><svg aria-hidden="true"><use href="#i-clock"/></svg></span>
+          <div>
+            <p>Почему «ещё пять минут» превращаются в&nbsp;час и&nbsp;как это исправить. Научишься ставить приоритеты и&nbsp;распределять время на&nbsp;учёбу и&nbsp;отдых.</p>
+            <ul class="ticks ticks--sm"><li>Как не&nbsp;отвлекаться на&nbsp;уведомления и&nbsp;соцсети во&nbsp;время учёбы</li><li>Как расставлять приоритеты в&nbsp;делах</li><li>Как планировать время на&nbsp;учёбу и&nbsp;отдых</li></ul>
+            <p class="lesson__tags"><span class="tag">Эфир</span><span class="tag">Практика</span><span class="tag tag--xp">Квиз · XP</span></p>
+          </div>
+        </div>
+      </details>
+
+      <p class="level reveal"><span class="level__tag">LVL 3</span>Творчество</p>
+
+      <details class="lesson reveal" id="lesson-5" data-lesson="5" data-date="2026-10-06">
+        <summary>
+          <span class="lesson__num">05</span>
+          <span class="lesson__body"><span class="lesson__title">Старт в&nbsp;цифровом дизайне</span><span class="lesson__date">вторник, 6 октября · 17:00&nbsp;МСК</span></span>
+          <span class="pill pill--soon" data-status>Скоро</span>
+          <svg class="lesson__chev" aria-hidden="true"><use href="#i-chev"/></svg>
+        </summary>
+        <div class="lesson__more">
+          <span class="lesson__icon"><svg aria-hidden="true"><use href="#i-pen"/></svg></span>
+          <div>
+            <p>Первые шаги в&nbsp;дизайне: композиция, слои и&nbsp;шрифты. Создаёшь собственную графику в&nbsp;Figma и&nbsp;с&nbsp;помощью ИИ.</p>
+            <ul class="ticks ticks--sm"><li>Основы композиции: как сделать картинку гармоничной</li><li>Работа со&nbsp;слоями и&nbsp;шрифтами в&nbsp;Figma</li><li>Как создавать графику с&nbsp;помощью нейросетей</li></ul>
+            <p class="lesson__tags"><span class="tag">Эфир</span><span class="tag">Практика</span><span class="tag tag--xp">Квиз · XP</span></p>
+          </div>
+        </div>
+      </details>
+
+      <details class="lesson reveal" id="lesson-6" data-lesson="6" data-date="2026-10-08">
+        <summary>
+          <span class="lesson__num">06</span>
+          <span class="lesson__body"><span class="lesson__title">Монтаж видео</span><span class="lesson__date">четверг, 8 октября · 17:00&nbsp;МСК</span></span>
+          <span class="pill pill--soon" data-status>Скоро</span>
+          <svg class="lesson__chev" aria-hidden="true"><use href="#i-chev"/></svg>
+        </summary>
+        <div class="lesson__more">
+          <span class="lesson__icon"><svg aria-hidden="true"><use href="#i-video"/></svg></span>
+          <div>
+            <p>Монтируем ролик в&nbsp;CapCut: нарезка клипов, динамичные переходы, звук и&nbsp;титры&nbsp;— как у&nbsp;любимых блогеров.</p>
+            <ul class="ticks ticks--sm"><li>Нарезка и&nbsp;склейка клипов</li><li>Динамические переходы</li><li>Работа со&nbsp;звуком и&nbsp;титрами</li></ul>
+            <p class="lesson__tags"><span class="tag">Эфир</span><span class="tag">Практика</span><span class="tag tag--xp">Квиз · XP</span></p>
+          </div>
+        </div>
+      </details>
+
+      <details class="lesson reveal" id="lesson-7" data-lesson="7" data-date="2026-10-13">
+        <summary>
+          <span class="lesson__num">07</span>
+          <span class="lesson__body"><span class="lesson__title">Быстрый веб-старт</span><span class="lesson__date">вторник, 13 октября · 17:00&nbsp;МСК</span></span>
+          <span class="pill pill--soon" data-status>Скоро</span>
+          <svg class="lesson__chev" aria-hidden="true"><use href="#i-chev"/></svg>
+        </summary>
+        <div class="lesson__more">
+          <span class="lesson__icon"><svg aria-hidden="true"><use href="#i-globe"/></svg></span>
+          <div>
+            <p>Собираешь собственный сайт на&nbsp;конструкторе и&nbsp;запускаешь его в&nbsp;сеть&nbsp;— ссылкой можно поделиться с&nbsp;друзьями и&nbsp;родителями.</p>
+            <ul class="ticks ticks--sm"><li>Как устроен сайт и&nbsp;из&nbsp;каких блоков он&nbsp;состоит</li><li>Сборка собственного сайта на&nbsp;конструкторе</li><li>Публикация сайта в&nbsp;интернете</li></ul>
+            <p class="lesson__tags"><span class="tag">Эфир</span><span class="tag">Практика</span><span class="tag tag--xp">Квиз · XP</span></p>
+          </div>
+        </div>
+      </details>
+
+      <p class="level reveal"><span class="level__tag">LVL 4</span>Учёба на&nbsp;максимум</p>
+
+      <details class="lesson reveal" id="lesson-8" data-lesson="8" data-date="2026-10-15">
+        <summary>
+          <span class="lesson__num">08</span>
+          <span class="lesson__body"><span class="lesson__title">Документы и&nbsp;таблицы</span><span class="lesson__date">четверг, 15 октября · 17:00&nbsp;МСК</span></span>
+          <span class="pill pill--soon" data-status>Скоро</span>
+          <svg class="lesson__chev" aria-hidden="true"><use href="#i-chev"/></svg>
+        </summary>
+        <div class="lesson__more">
+          <span class="lesson__icon"><svg aria-hidden="true"><use href="#i-table"/></svg></span>
+          <div>
+            <p>Таблицы, которые считают за&nbsp;тебя. Разбираем формулы, расчёты и&nbsp;правильное оформление данных и&nbsp;документов.</p>
+            <ul class="ticks ticks--sm"><li>Формулы и&nbsp;автоматические расчёты</li><li>Правильное форматирование данных</li><li>Аккуратное оформление документов</li></ul>
+            <p class="lesson__tags"><span class="tag">Эфир</span><span class="tag">Практика</span><span class="tag tag--xp">Квиз · XP</span></p>
+          </div>
+        </div>
+      </details>
+
+      <details class="lesson reveal" id="lesson-9" data-lesson="9" data-date="2026-10-20">
+        <summary>
+          <span class="lesson__num">09</span>
+          <span class="lesson__body"><span class="lesson__title">Эффективные презентации</span><span class="lesson__date">вторник, 20 октября · 17:00&nbsp;МСК</span></span>
+          <span class="pill pill--soon" data-status>Скоро</span>
+          <svg class="lesson__chev" aria-hidden="true"><use href="#i-chev"/></svg>
+        </summary>
+        <div class="lesson__more">
+          <span class="lesson__icon"><svg aria-hidden="true"><use href="#i-slides"/></svg></span>
+          <div>
+            <p>Как понятно показать свою идею: визуализация, сетка и&nbsp;иерархия. Делаешь стильные слайды, которые не&nbsp;стыдно показать на&nbsp;уроке.</p>
+            <ul class="ticks ticks--sm"><li>Как визуализировать идею понятно</li><li>Правила сетки и&nbsp;иерархии на&nbsp;слайде</li><li>Стильное оформление без перегруза текстом</li></ul>
+            <p class="lesson__tags"><span class="tag">Эфир</span><span class="tag">Практика</span><span class="tag tag--xp">Квиз · XP</span></p>
+          </div>
+        </div>
+      </details>
+
+      <details class="lesson reveal" id="lesson-10" data-lesson="10" data-date="2026-10-22">
+        <summary>
+          <span class="lesson__num">10</span>
+          <span class="lesson__body"><span class="lesson__title">ИИ и&nbsp;цифровые сервисы для учёбы</span><span class="lesson__date">четверг, 22 октября · 17:00&nbsp;МСК</span></span>
+          <span class="pill pill--soon" data-status>Скоро</span>
+          <svg class="lesson__chev" aria-hidden="true"><use href="#i-chev"/></svg>
+        </summary>
+        <div class="lesson__more">
+          <span class="lesson__icon"><svg aria-hidden="true"><use href="#i-spark"/></svg></span>
+          <div>
+            <p>Собираем личный набор цифровых помощников: умные нейросети, облачные диски и&nbsp;чек-листы, с&nbsp;которыми учиться легче.</p>
+            <ul class="ticks ticks--sm"><li>Как использовать нейросети для учёбы с&nbsp;умом</li><li>Облачные диски: хранить и&nbsp;находить файлы с&nbsp;любого устройства</li><li>Чек-листы, которые помогают ничего не&nbsp;забывать</li></ul>
+            <p class="lesson__tags"><span class="tag">Эфир</span><span class="tag">Практика</span><span class="tag tag--xp">Квиз · XP</span></p>
+          </div>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 5. ФОРМАТ ============ -->
+<section class="section wrap" id="format" aria-labelledby="format-title">
+  <div class="head reveal">
+    <p class="eyebrow">Формат</p>
+    <h2 class="h2" id="format-title">Как устроен интенсив</h2>
+    <p class="lead">Пять недель, два эфира в&nbsp;неделю. Всё, что нужно для учёбы,&nbsp;— внутри EasyLab.</p>
+  </div>
+
+  <div class="bento">
+    <article class="tile tile--hero reveal">
+      <span class="tile__icon tile__icon--light"><svg aria-hidden="true"><use href="#i-play"/></svg></span>
+      <p class="tile__big">10</p>
+      <h3 class="h3">интерактивных онлайн-вебинаров</h3>
+      <p>Живые эфиры с&nbsp;преподавателем: он&nbsp;показывает на&nbsp;экране, ты&nbsp;повторяешь у&nbsp;себя и&nbsp;задаёшь вопросы по&nbsp;ходу урока.</p>
+    </article>
+    <article class="tile reveal">
+      <span class="tile__icon"><svg aria-hidden="true"><use href="#i-quiz"/></svg></span>
+      <h3 class="h4">Практика и&nbsp;мгновенные квизы</h3>
+      <p>После каждого урока&nbsp;— практическое задание и&nbsp;короткий квиз. Результат виден сразу, а&nbsp;за&nbsp;прохождение начисляются XP и&nbsp;EasyCoins.</p>
+      <p class="chips"><span class="chip chip--xp">+ XP</span><span class="chip chip--coin"><svg aria-hidden="true"><use href="#coin"/></svg>EasyCoins</span></p>
+    </article>
+    <article class="tile reveal">
+      <span class="tile__icon"><svg aria-hidden="true"><use href="#i-chat"/></svg></span>
+      <h3 class="h4">Закрытый чат поддержки</h3>
+      <p>Преподаватель и&nbsp;кураторы на&nbsp;связи между уроками&nbsp;— помогут, если что-то не&nbsp;получается.</p>
+    </article>
+    <article class="tile reveal">
+      <span class="tile__icon"><svg aria-hidden="true"><use href="#i-folder"/></svg></span>
+      <h3 class="h4">Записи и&nbsp;материалы в&nbsp;кабинете</h3>
+      <p>Пропустил эфир или хочешь пересмотреть? Все уроки и&nbsp;материалы сохраняются в&nbsp;личном кабинете.</p>
+    </article>
+    <article class="tile reveal">
+      <span class="tile__icon"><svg aria-hidden="true"><use href="#i-award"/></svg></span>
+      <h3 class="h4">Именной сертификат</h3>
+      <p>По&nbsp;окончании интенсива каждый выпускник получает именной сертификат.</p>
+    </article>
+  </div>
+
+  <div class="schedule reveal">
+    <div class="schedule__item"><svg aria-hidden="true"><use href="#i-calendar"/></svg><div><b>22 сентября</b><span>старт</span></div></div>
+    <div class="schedule__item"><svg aria-hidden="true"><use href="#i-clock"/></svg><div><b>Вт и&nbsp;Чт в&nbsp;17:00</b><span>по&nbsp;Москве</span></div></div>
+    <div class="schedule__item"><svg aria-hidden="true"><use href="#i-bolt"/></svg><div><b>5 недель</b><span>до&nbsp;22 октября</span></div></div>
+    <button class="btn btn--grad" type="button" data-enroll>Записаться на&nbsp;интенсив</button>
+  </div>
+</section>
+
+<!-- ============ 5.1. КАК ЗАПИСАТЬСЯ: контакт менеджера не публикуется — у каждого клиента он свой ============ -->
+<section class="section wrap" id="join" aria-labelledby="join-title">
+  <div class="join reveal">
+    <div class="join__main">
+      <p class="eyebrow eyebrow--light"><span class="eyebrow__line"></span>Всего один шаг</p>
+      <h2 class="h2 h2--light join__title" id="join-title">Как <span class="grad-text grad-text--light">записаться</span> на&nbsp;интенсив</h2>
+      <p class="join__lead">Напиши своему персональному менеджеру фразу «Хочу записаться на&nbsp;интенсив!»&nbsp;— он&nbsp;расскажет об&nbsp;условиях участия и&nbsp;подключит интенсив к&nbsp;твоему аккаунту EasyLab.</p>
+      <p class="note note--light">
+        <span class="note__icon"><svg aria-hidden="true"><use href="#i-chat"/></svg></span>
+        <span><b>По&nbsp;любым вопросам&nbsp;— к&nbsp;персональному менеджеру</b>Он&nbsp;на&nbsp;связи там, где вы&nbsp;уже общаетесь: в&nbsp;MAX, ВКонтакте или Telegram.</span>
+      </p>
+    </div>
+
+    <div class="chat" role="group" aria-label="Сообщение для персонального менеджера">
+      <div class="chat__head">
+        <span class="chat__ava"><svg aria-hidden="true"><use href="#i-user"/></svg></span>
+        <span class="chat__who"><b>Персональный менеджер</b><small>MAX · ВКонтакте · Telegram</small></span>
+      </div>
+      <div class="chat__body">
+        <p class="chat__msg" data-enroll-text>Хочу записаться на интенсив!</p>
+        <p class="chat__typing" aria-hidden="true"><i></i><i></i><i></i></p>
+      </div>
+      <button class="btn btn--grad btn--lg btn--block" type="button" data-copy><svg aria-hidden="true"><use href="#i-copy"/></svg><span data-copy-label aria-live="polite">Скопировать фразу</span></button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 6. ДОСТУП: прототип карточки урока ============ -->
+<section class="section wrap" id="access" aria-labelledby="access-title">
+  <div class="head reveal">
+    <p class="eyebrow">Эфиры, записи и&nbsp;квизы</p>
+    <h2 class="h2" id="access-title">Как попасть на&nbsp;эфир</h2>
+    <p class="lead">Интенсив закрытый: эфиры, записи и&nbsp;чат доступны только участникам. Вход&nbsp;— по&nbsp;аккаунту EasyLab, к&nbsp;которому менеджер подключит интенсив.</p>
+  </div>
+
+  <div class="proto reveal" data-proto data-state="soon">
+    <div class="proto__intro">
+      <p class="eyebrow">Прототип</p>
+      <h3 class="h3">Карточка урока в&nbsp;кабинете</h3>
+      <p>Так урок выглядит на&nbsp;платформе в&nbsp;разные моменты. Переключай состояния:</p>
+      <div class="seg" role="tablist" aria-label="Состояние урока">
+        <button type="button" role="tab" data-proto-set="soon" aria-selected="true">Скоро</button>
+        <button type="button" role="tab" data-proto-set="live" aria-selected="false">В&nbsp;эфире</button>
+        <button type="button" role="tab" data-proto-set="done" aria-selected="false">Завершён</button>
+        <button type="button" role="tab" data-proto-set="locked" aria-selected="false">Нет доступа</button>
+      </div>
+      <p class="proto__caption" data-proto-caption>До&nbsp;урока: карточка показывает дату и&nbsp;время, квиз закрыт.</p>
+    </div>
+
+    <div class="proto__screen" aria-live="polite">
+      <div class="proto__bar"><span></span><span></span><span></span><em>platform-easycode.ru</em></div>
+      <div class="proto__page">
+        <p class="proto__crumb"><svg aria-hidden="true"><use href="#i-back"/></svg>Ключ к&nbsp;технологиям</p>
+        <div class="proto__row">
+          <p class="eyebrow">Урок №3</p>
+          <span class="pill pill--soon" data-when="soon">Скоро</span>
+          <span class="pill pill--live" data-when="live" hidden><span class="live-dot"></span>В&nbsp;эфире</span>
+          <span class="pill pill--done" data-when="done" hidden>Завершён</span>
+          <span class="pill pill--lock" data-when="locked" hidden><svg aria-hidden="true"><use href="#i-lock"/></svg>Закрыто</span>
+        </div>
+        <p class="proto__title">Цифровая гигиена и&nbsp;кибербезопасность</p>
+        <p class="proto__date">вторник, 29 сентября <b class="grad-text">17:00&nbsp;МСК</b></p>
+
+        <div class="proto__actions">
+          <span class="btn btn--wait btn--sm" data-when="soon">Эфир откроется в&nbsp;16:50</span>
+          <a class="btn btn--live btn--sm" data-when="live" data-room-link href="#" target="_blank" rel="noopener" hidden><span class="live-dot live-dot--white"></span>В&nbsp;эфире&nbsp;— войти</a>
+          <span class="btn btn--dark btn--sm" data-when="done" hidden><svg aria-hidden="true"><use href="#i-play"/></svg>Смотреть запись</span>
+          <div class="proto__locked" data-when="locked" hidden>
+            <p><b>Этот эфир только для участников интенсива.</b> Войди в&nbsp;аккаунт участника или запишись через менеджера.</p>
+            <span class="proto__btns"><span class="btn btn--ghost btn--sm">Войти</span><button class="btn btn--grad btn--sm" type="button" data-enroll>Записаться</button></span>
+          </div>
+        </div>
+
+        <div class="quizrow" data-when="soon live done">
+          <div>
+            <p class="quizrow__title">Квиз: Цифровая гигиена и&nbsp;кибербезопасность</p>
+            <p class="quizrow__meta">3 вопроса</p>
+            <p class="chips"><span class="chip chip--xp">75 XP</span><span class="chip chip--coin">2 <svg aria-hidden="true"><use href="#coin"/></svg></span></p>
+          </div>
+          <span class="quizrow__btn" data-when="soon live">Закрыт</span>
+          <a class="quizrow__btn quizrow__btn--go" data-when="done" href="#quiz" hidden>Пройти</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 7. ДЕМО-КВИЗ ============ -->
+<section class="section wrap" id="quiz" aria-labelledby="quiz-title">
+  <div class="quiz reveal" data-quiz>
+    <div class="quiz__side">
+      <p class="eyebrow eyebrow--light"><span class="eyebrow__line"></span>Мини-квиз</p>
+      <h2 class="h2 h2--light" id="quiz-title">Проверь себя за&nbsp;минуту</h2>
+      <p>Три вопроса из&nbsp;уроков интенсива. Так выглядят квизы после каждого занятия&nbsp;— ответ проверяется сразу.</p>
+      <div class="quiz__xp">
+        <span class="quiz__xpnum" data-quiz-xp>0</span><span class="quiz__xplabel">XP<br><small>демо, на&nbsp;счёт не&nbsp;идут</small></span>
+      </div>
+    </div>
+    <div class="quiz__card" data-quiz-card>
+      <noscript><p>Включите JavaScript, чтобы пройти мини-квиз.</p></noscript>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 8. ПРЕПОДАВАТЕЛЬ ============ -->
+<section class="section wrap" id="teacher" aria-labelledby="teacher-title">
+  <div class="teacher">
+    <div class="teacher__photo reveal">
+      <img src="assets/teacher.jpg" width="900" height="1206" alt="Всеволод Яхимович, ведущий преподаватель EasyCode" loading="lazy">
+      <svg class="teacher__sign" aria-hidden="true"><use href="#sign"/></svg>
+      <span class="teacher__badge"><span class="live-dot"></span>Ведёт все 10 эфиров</span>
+    </div>
+    <div class="teacher__text reveal">
+      <p class="eyebrow">Преподаватель</p>
+      <h2 class="h2" id="teacher-title">Всеволод Яхимович</h2>
+      <p class="teacher__role">Ведущий преподаватель EasyCode</p>
+      <p class="lead">Проведёт тебя по&nbsp;всем десяти темам&nbsp;— от&nbsp;процессора до&nbsp;нейросетей. На&nbsp;эфирах показывает всё на&nbsp;экране шаг за&nbsp;шагом, а&nbsp;между уроками остаётся на&nbsp;связи в&nbsp;закрытом чате вместе с&nbsp;кураторами.</p>
+      <ul class="teacher__facts">
+        <li><svg aria-hidden="true"><use href="#i-play"/></svg><span><b>10 живых эфиров</b>с&nbsp;вопросами по&nbsp;ходу урока</span></li>
+        <li><svg aria-hidden="true"><use href="#i-chat"/></svg><span><b>Закрытый чат</b>с&nbsp;преподавателем и&nbsp;кураторами</span></li>
+        <li><svg aria-hidden="true"><use href="#i-quiz"/></svg><span><b>Практика после урока</b>и&nbsp;мгновенные квизы</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 9. СЕРТИФИКАТ ============ -->
+<section class="section wrap" id="certificate" aria-labelledby="cert-title">
+  <div class="cert-wrap">
+    <div class="cert-text reveal">
+      <p class="eyebrow">Финал</p>
+      <h2 class="h2" id="cert-title">Именной сертификат выпускника</h2>
+      <p class="lead">Десять уроков, десять заполненных капсул&nbsp;— и&nbsp;сертификат с&nbsp;твоим именем. Приятный повод для гордости и&nbsp;строчка в&nbsp;портфолио.</p>
+      <button class="btn btn--grad btn--lg" type="button" data-enroll>Хочу сертификат<svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
+    </div>
+    <div class="cert reveal" aria-label="Пример сертификата">
+      <div class="cert__inner">
+        <p class="cert__logo"><svg aria-hidden="true"><use href="#sign"/></svg><span>easy<span>code</span></span></p>
+        <p class="cert__word">Сертификат</p>
+        <p class="cert__sub">о&nbsp;прохождении практического интенсива<br>«Ключ к&nbsp;технологиям»</p>
+        <p class="cert__name">Имя Фамилия</p>
+        <p class="cert__line">10 уроков · сентябрь&nbsp;— октябрь 2026</p>
+        <div class="cert__foot">
+          <p><small>Преподаватель</small>В.&nbsp;Яхимович</p>
+          <span class="cert__seal"><svg aria-hidden="true"><use href="#sign"/></svg></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 10. ВОПРОСЫ ============ -->
+<section class="section wrap" id="faq" aria-labelledby="faq-title">
+  <div class="faq">
+    <div class="head reveal">
+      <p class="eyebrow">Вопросы</p>
+      <h2 class="h2" id="faq-title">Частые вопросы</h2>
+      <p class="lead">Не&nbsp;нашли ответ? Персональный менеджер подскажет.</p>
+      <p class="note">
+        <span class="note__icon"><svg aria-hidden="true"><use href="#i-chat"/></svg></span>
+        <span>Пиши ему там, где вы&nbsp;уже общаетесь: в&nbsp;MAX, ВКонтакте или Telegram.</span>
+      </p>
+    </div>
+    <div class="faq__list">
+      <details class="qa reveal"><summary>Можно ли попасть на&nbsp;эфир без записи?<svg aria-hidden="true"><use href="#i-chev"/></svg></summary><p>Нет. Интенсив закрытый: эфиры, записи уроков и&nbsp;чат поддержки открыты только участникам. Кнопка «В&nbsp;эфире» ведёт в&nbsp;вебинарную комнату платформы, куда пускают по&nbsp;аккаунту участника.</p></details>
+      <details class="qa reveal"><summary>Что нужно для занятий?<svg aria-hidden="true"><use href="#i-chev"/></svg></summary><p>Компьютер или ноутбук с&nbsp;доступом в&nbsp;интернет и&nbsp;аккаунт на&nbsp;платформе EasyLab. Остальные подробности расскажет менеджер при записи.</p></details>
+      <details class="qa reveal"><summary>Что если пропустить урок?<svg aria-hidden="true"><use href="#i-chev"/></svg></summary><p>Ничего страшного: запись каждого урока и&nbsp;материалы сохраняются в&nbsp;личном кабинете. Их&nbsp;можно посмотреть в&nbsp;удобное время.</p></details>
+      <details class="qa reveal"><summary>Как проходят квизы?<svg aria-hidden="true"><use href="#i-chev"/></svg></summary><p>После каждого урока в&nbsp;кабинете открывается короткий квиз по&nbsp;теме. Ответы проверяются мгновенно, а&nbsp;за&nbsp;прохождение начисляются XP и&nbsp;EasyCoins&nbsp;— как за&nbsp;другие задания платформы.</p></details>
+      <details class="qa reveal"><summary>Когда проходят занятия?<svg aria-hidden="true"><use href="#i-chev"/></svg></summary><p>Каждый вторник и&nbsp;четверг в&nbsp;17:00 по&nbsp;Москве. Первый урок&nbsp;— 22 сентября, последний&nbsp;— 22 октября.</p></details>
+      <details class="qa reveal"><summary>Кто ответит на&nbsp;вопросы между уроками?<svg aria-hidden="true"><use href="#i-chev"/></svg></summary><p>Преподаватель и&nbsp;кураторы в&nbsp;закрытом чате поддержки интенсива.</p></details>
+      <details class="qa reveal"><summary>Будет ли сертификат?<svg aria-hidden="true"><use href="#i-chev"/></svg></summary><p>Да. По&nbsp;окончании интенсива каждый выпускник получает именной сертификат.</p></details>
+      <details class="qa reveal"><summary>Как узнать условия участия?<svg aria-hidden="true"><use href="#i-chev"/></svg></summary><p>Напишите своему персональному менеджеру&nbsp;— в&nbsp;MAX, ВКонтакте или Telegram, там, где вы&nbsp;уже на&nbsp;связи. Он&nbsp;расскажет обо всех условиях.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 11. ФИНАЛЬНЫЙ ПРИЗЫВ ============ -->
+<section class="wrap final-wrap" aria-labelledby="final-title">
+  <div class="final reveal">
+    <svg class="final__sign" aria-hidden="true"><use href="#sign"/></svg>
+    <p class="eyebrow eyebrow--light"><span class="eyebrow__line"></span>Старт 22 сентября</p>
+    <h2 class="h2 h2--light final__title" id="final-title">Получи ключ к&nbsp;технологиям за&nbsp;10&nbsp;уроков</h2>
+    <p class="final__text">Напиши персональному менеджеру&nbsp;— он&nbsp;расскажет об&nbsp;условиях участия и&nbsp;подключит интенсив к&nbsp;твоему аккаунту EasyLab.</p>
+    <div class="final__cta">
+      <button class="btn btn--white btn--lg" type="button" data-enroll>Записаться на&nbsp;интенсив<svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
+      <a class="btn btn--glass btn--lg" href="https://easycode-lab.ru/login">Я&nbsp;участник&nbsp;— войти</a>
+    </div>
+    <p class="final__timer" data-final-timer>До&nbsp;старта&nbsp;— <b>скоро</b></p>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer wrap">
+  <a class="logo" href="https://easycode-lab.ru" aria-label="EasyCode Lab&nbsp;— на главную">
+    <svg class="logo__sign" aria-hidden="true"><use href="#sign"/></svg>
+    <span class="logo__word"><span class="grad-text">EasyCode</span> Lab</span>
+  </a>
+  <p class="footer__about">Практический интенсив «Ключ к&nbsp;технологиям»&nbsp;— часть образовательной платформы EasyLab.</p>
+  <nav class="footer__nav" aria-label="Ссылки">
+    <a href="https://easycode-lab.ru">Главная</a>
+    <a href="https://easycode-lab.ru/login">Войти</a>
+    <a href="https://easycode-lab.ru/register">Регистрация</a>
+    <a href="https://platform-easycode.ru">Платформа</a>
+  </nav>
+  <p class="footer__copy">© 2026 EasyCode</p>
+</footer>
+
+<!-- Липкая кнопка на мобильных -->
+<div class="dock" data-dock aria-hidden="true">
+  <div class="dock__text"><b>Старт 22 сентября</b><span>Вт и&nbsp;Чт · 17:00&nbsp;МСК</span></div>
+  <button class="btn btn--grad btn--sm" type="button" data-enroll tabindex="-1">Записаться</button>
+</div>
+
+<!-- Окно записи: открывается по любой кнопке «Записаться». Контакта менеджера нет — у каждого клиента он свой -->
+<dialog class="sheet" id="enroll" aria-labelledby="enroll-title">
+  <form method="dialog" class="sheet__close-form"><button class="sheet__close" aria-label="Закрыть"><svg aria-hidden="true"><use href="#i-close"/></svg></button></form>
+  <span class="sheet__icon"><svg aria-hidden="true"><use href="#i-send"/></svg></span>
+  <h2 class="h3" id="enroll-title">Запись на&nbsp;интенсив</h2>
+  <p class="sheet__text">Напиши своему персональному менеджеру эту фразу&nbsp;— он&nbsp;расскажет об&nbsp;условиях участия и&nbsp;подключит интенсив к&nbsp;аккаунту EasyLab.</p>
+  <p class="bubble" data-enroll-text>Хочу записаться на интенсив!</p>
+  <button class="btn btn--grad btn--block" type="button" data-copy><svg aria-hidden="true"><use href="#i-copy"/></svg><span data-copy-label aria-live="polite">Скопировать фразу</span></button>
+  <p class="note">
+    <span class="note__icon"><svg aria-hidden="true"><use href="#i-chat"/></svg></span>
+    <span><b>По&nbsp;любым вопросам&nbsp;— к&nbsp;персональному менеджеру</b>Он&nbsp;на&nbsp;связи там, где вы&nbsp;уже общаетесь: в&nbsp;MAX, ВКонтакте или Telegram.</span>
+  </p>
+</dialog>
+
+<div class="demo-badge" data-demo-badge hidden></div>
+
+<script src="app.js"></script>
+</body>
+</html>
